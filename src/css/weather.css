@@ -1,0 +1,53 @@
+.card {
+    display: flex;
+    width: auto;
+    margin: 20px;
+    max-height: 40%;
+    height: 100%;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    /* color: rgb(220, 185, 139); */
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 2em rgb(42, 41, 47), 0 0 0.2em rgb(0, 221, 255);
+}
+
+.location-name {
+    padding-left: 50px;
+    font-size: 50px;
+    color: white;
+}
+
+.left-block {
+    display: flex;
+    border-radius: 20px;
+    width: 50%;
+    font-size: 30px;
+}
+
+.weather-icon {
+    size: 150%;
+}
+
+.right-block {
+    display: flex;
+    border: 0px solid rgba(195, 233, 233, 0.665);
+    width: 50%;
+    border-radius: 20px;
+    background: #efebeb5c;
+    font-size: 25px;
+}
+
+.right-block > ul > li {
+    margin: 50px 15px;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    font-display: row;
+}
+
+li {
+    list-style-type: none;
+}
