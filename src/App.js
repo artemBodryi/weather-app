@@ -27,19 +27,25 @@ export default function App() {
 
           //convert data from Kelvin to Celsius
           // check if temperature in Kelvin is valid
-          if (result.main.temp >= 0 && result.main.temp <= 1000) {
+          if (result.main.temp >= 0 && result.main.temp <= 100) {
             // convert temperature from Kelvin to Celsius
-            const temperatureCelsius = result.main.temp + 273.15;
+            const temperatureCelsius = result.main.temp;
             result.main.temp = temperatureCelsius.toFixed(2);
 
-            const lowCelsius = result.main.temp_min + 273.15;
+            const lowCelsius = result.main.temp_min;
             result.main.temp_min = lowCelsius.toFixed(2);
 
-            const heightCelsius = result.main.temp_max + 273.15;
+            const heightCelsius = result.main.temp_max;
             result.main.temp_max = heightCelsius.toFixed(2);
           } else {
-             // set temperature to NaN if it is not valid
-             result.main.temp = NaN;
+            const temperatureCelsius = result.main.temp - 273.15;
+            result.main.temp = temperatureCelsius.toFixed(2);
+
+            const lowCelsius = result.main.temp_min - 273.15;
+            result.main.temp_min = lowCelsius.toFixed(2);
+
+            const heightCelsius = result.main.temp_max - 273.15;
+            result.main.temp_max = heightCelsius.toFixed(2);
            }
           console.log(result.main.temp)
           setData(result)

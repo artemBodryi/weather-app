@@ -14,7 +14,7 @@ const CardExampleCard = ({ weatherData }) => (
       <div className="left-block">
         {"main" && "weather" in weatherData ? (
           <ul>
-            <li>{Math.round(weatherData.main.temp - 273.15)} ˚C</li>
+            <li>{Math.round(weatherData.main.temp)} ˚C</li>
             <li></li>
             <li>
               <img
@@ -38,10 +38,10 @@ const CardExampleCard = ({ weatherData }) => (
           <>
             <ul>
               <li className="col">
-                Low: {Math.round(weatherData.main.temp_min - 273.15)} ˚C
+                Low: {Math.round(weatherData.main.temp_min)} ˚C
               </li>
               <li>
-                Height: {Math.round(weatherData.main.temp_max - 273.15)} ˚C
+                Height: {Math.round(weatherData.main.temp_max)} ˚C
               </li>
             </ul>
             <ul>

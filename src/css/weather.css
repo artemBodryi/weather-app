@@ -30,7 +30,10 @@
 .right-block {
     display: flex;
     border: 0px solid rgba(195, 233, 233, 0.665);
+    min-width: 50%;
+    min-width: 467px;
     width: 50%;
+    width: auto;
     border-radius: 20px;
     background: #efebeb5c;
     font-size: 25px;
